@@ -1,0 +1,19 @@
+.post-content > p > code {
+    color: #0073ea;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: $medium;
+}
+
+.post-content > pre {
+    background-color: $syntax-background;
+    color: $text-color;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: $medium;
+    overflow: auto;
+}
+
+.post-content > pre > code > a {
+    color: $text-color;
+}

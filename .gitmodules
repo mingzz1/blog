@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/mingzz1/hugo-blog.git
+	branch = main
