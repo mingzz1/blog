@@ -74,8 +74,6 @@ else
 소스코드는 아래와 같다.  
 
 ```python
-import urllib2
-import urllib
 import requests
 
 a = ""

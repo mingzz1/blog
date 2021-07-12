@@ -4,7 +4,7 @@
         {{ partial "home_nav" . }}
 
         <div>
-            <h3> Posts <span>{{ len .Pages }}</span></h3>
+            <h3> {{ .Page.Title }} <span>{{ len .Pages }}</span></h3>
             <ul class="post-box">
                 {{ range .Pages }}
                 <li class="post-teaser">

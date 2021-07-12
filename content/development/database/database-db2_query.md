@@ -39,25 +39,25 @@ db2 => select * from table;
 
 * 데이터베이스 생성  
 
-```sql
+```mysql
 create database DB_NAME
 ```
 
 * 테이블 생성
 
-```sql
+```mysql
 create table DB_NAME.TABLE_NAME(COL_1 char(30) not null, COL_2 varchar(100) not null);
 ```
 
 * insert
 
-```sql
+```mysql
 insert into DB_NAME.TABLE_NAME(COL_1, COL_2, ...) values('VAL1_1', 'VAL1_2', '...'), ('VAL1_1', 'VAL1_2', '...'), (...);
 ```
 
 * select
 
-```sql
+```mysql
 select * from DB_NAME.TABLE_NAME where CONDITION;
 ```
 
@@ -66,7 +66,7 @@ select * from DB_NAME.TABLE_NAME where CONDITION;
 #### 참고사항
 * where절 사용 시, 문자는 작은따옴표(')로 묶어야 하고, 조건은 대소문자를 구분한다.
 
-```sql
+```mysql
 select * from table where col='CONDITION';
 ```
 
@@ -74,25 +74,25 @@ select * from table where col='CONDITION';
 
 * 전체 데이터베이스 리스트 출력
 
-```sql
+```mysql
 list database directory
 ```
 
 * 전체 테이블 리스트 확인
 
-```sql
+```mysql
 select * from sysibm.systables;
 ```
 
 이 때, `name` 컬럼은 `테이블 명`, `creator` 컬럼은 `데이터베이스 명`이다. 따라서 아래와 같이 사용하면 특정 데이터베이스 내의 테이블 명만 추출할 수 있다.  
 
-```sql
+```mysql
 select name from sysibm.systables where creator='DB_NAME';
 ```
 
 * 특정 개수만큼 select
 
-```sql
+```mysql
 select * from TABLE_NAME fetch first NUM rows only;
 ```
 
