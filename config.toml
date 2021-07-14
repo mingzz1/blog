@@ -3,6 +3,8 @@ languageCode = "ko-kr"
 title = "mingzzi's blog"
 theme = "triplemode"
 
+disablePathToLower = "true"
+
 [params]
 favicon = "img/favicon.ico"
 description = "mingzzi's blog"
