@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://mingzz1.github.io/"
 languageCode = "ko-kr"
 title = "mingzzi's blog"
 theme = "triplemode"
