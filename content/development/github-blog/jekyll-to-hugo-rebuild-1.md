@@ -1,7 +1,7 @@
 ---
 title: "[Hugo] Jekyll to Hugo 블로그 이전기"
 date: 2021-07-12
-draft: false
+draft: true
 category: [development]
 subcategories: [github-blog]
 tags: [Hugo, Github Blog]
@@ -13,6 +13,10 @@ tags: [Hugo, Github Blog]
 그래서 고민하다가 블로그를 대대적으로 리뉴얼 하면서 `Hugo`로 이전까지 하게 되었다. 
 
 <!--more-->
+
+일단 내가 블로그 리뉴얼 + Hugo로 이전을 결정하게 된 이유는 아래와 같다.
+
+
 
 날짜를 미래의 날짜로 하면 글이 안뜸
 draft true 로 해도 글이 안뜸
