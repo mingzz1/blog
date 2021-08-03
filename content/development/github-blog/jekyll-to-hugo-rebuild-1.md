@@ -1,6 +1,6 @@
 ---
 title: "[Hugo] Jekyll to Hugo 블로그 이전기 1"
-date: 2021-08-03
+date: 2021-08-02
 draft: false
 category: [development]
 subcategories: [github-blog]
