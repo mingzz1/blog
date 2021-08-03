@@ -263,7 +263,7 @@ tags: [tag1], tag2]
 ```
 
 여기서 `category`에는 `메인 카테고리 명`, `subcategories`에는 `서브 카테고리 명`을 적었다.
-예를 들어서 어떤 포스팅의 경로가 `contents/category1/category_a/test_posting.html`일 경우, `category`는 `category1`, `subcategories`는 `category_a`가 되는 것이다.
+예를 들어서 어떤 포스팅의 경로가 `content/category1/category_a/test_posting.html`일 경우, `category`는 `category1`, `subcategories`는 `category_a`가 되는 것이다.
 
 이 후 각 카테고리 별로 메뉴를 만들어 메뉴 클릭 시 해당 카테고리 내 포스팅을 보여주기 위해서 코드를 구현했다.
 먼저 메뉴 부분은 아래와 같다.
