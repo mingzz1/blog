@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+<html class="no-js">
+<head>
+	<meta name="generator" content="Hugo 0.68.3" />
+    <meta charset="utf-8">
+
+    <base href="https://mingzz1.github.io/">
+    <title> mingzzi&#39;s blog </title>
+    <meta name="description" content="mingzzi&#39;s blog">
+
+    <link rel="canonical" href="https://mingzz1.github.io/">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+    
+    <link rel="stylesheet" href="https://mingzz1.github.io/sass/main.min.94d6e676b5b11c22f591951fd9b4e6ab0f6a3179daac45918d1fbc53ed631f00.css">
+
+    <link rel="shortcut icon" href="https://mingzz1.github.io/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130304424-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-130304424-1');
+    </script>
+
+    
+    <script data-ad-client="ca-pub-1587587893565234" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script>
+        $(function () {
+            $(".cat1>li").click(function () {
+                $(this).siblings().find('ul').slideUp(300);
+                $(this).find('ul').slideToggle(300);
+            })
+
+            $(window).scroll(function () {
+                activeBg();
+            });
+
+            activeBg();
+
+
+            $('.h-menu').click(function (e) {
+                e.preventDefault();
+                $('.side').addClass('on');
+            });
+
+            $('.close').click(function (e) {
+                e.preventDefault();
+                $('.side').removeClass('on');
+            });
+
+            $('ul.slide>li').click(function () {
+                if ($(this).find('.down').hasClass('on')) {
+                    $(this).find('.down').removeClass('on');
+                    $(this).find('.down').prev().stop().slideUp(500);
+                } else {
+                    $(this).find('.down').addClass('on');
+                    $(this).find('.down').prev().stop().slideDown(500);
+                }
+            })
+        })
+
+        function activeBg() {
+            if ($(window).scrollTop() > 0) {
+                $('.site-header').addClass('on');
+            } else {
+                $('.site-header').removeClass('on');
+            }
+        }
+
+    </script>
+</head>
+<header class="site-header">
+    <h1 class="web-t" onclick="window.location.href='/'"><span>def</span><em> 천방지축 얼렁뚱땅
+        </em><span>(</span><i>🤣</i><span>)</span>:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="nbsp">title =</span> 빙글빙글 돌아가는 우당탕탕 시큐로그
+        <br />
+    </h1>
+
+    <h1 class="mob-t" onclick="window.location.href='/'">
+        <span>천/얼/빙/돌(</span><i>🤣</i><span>)</span>
+        <br />우당탕탕 시큐로그
+    </h1>
+
+    <nav>
+        <div class="h-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="side">
+            <div class="close">
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="slide">
+                <li class="on"><a href="#">All Post</a>
+                </li>
+                <li><a>Pentesting</a>
+                    <ul>
+                        <li><a href="https://mingzz1.github.io//pentesting/ios">iOS</a></li>
+                        <li><a href="https://mingzz1.github.io//pentesting/android">Android</a></li>
+                        <li><a href="https://mingzz1.github.io//pentesting/web">Web</a></li>
+                        <li><a href="https://mingzz1.github.io//pentesting/cloud">Cloud</a></li>
+                    </ul>
+                    <span class="down"></span>
+                </li>
+                <li><a>Wargame</a>
+                    <ul>
+                        <li><a href="https://mingzz1.github.io//wargame/lord-of-sql-injection">Lord of SQL Injection</a></li>
+                        <li><a href="https://mingzz1.github.io//wargame/pwnable.kr">Pwnable.kr</a></li>
+                        <li><a href="https://mingzz1.github.io//wargame/wargame.kr">Wargame.kr</a></li>
+                        <li><a href="https://mingzz1.github.io//wargame/xss-game">XSS Game</a></li>
+                        <li><a href="https://mingzz1.github.io//wargame/owasp">OWASP-MSTG Crackmes</a></li>
+                    </ul>
+                    <span class="down"></span>
+                </li>
+                <li><a>CTF</a>
+                    <ul>
+                        <li><a href="https://mingzz1.github.io//ctf/2018">2018</a></li>
+                        <li><a href="https://mingzz1.github.io//ctf/2019">2019</a></li>
+                    </ul>
+                    <span class="down"></span>
+                </li>
+                <li><a>Error</a>
+                    <ul>
+                        <li><a href="https://mingzz1.github.io//error/linux">Linux</a></li>
+                        <li><a href="https://mingzz1.github.io//error/windows">Windows</a></li>
+                        <li><a href="https://mingzz1.github.io//error/python">Python</a></li>
+                    </ul>
+                    <span class="down"></span>
+                </li>
+                <li><a>Development</a>
+                    <ul>
+                        <li><a href="https://mingzz1.github.io//development/basic">Basic</a></li>
+                        <li><a href="https://mingzz1.github.io//development/web">Web</a></li>
+                        <li><a href="https://mingzz1.github.io//development/mobile">Mobile</a></li>
+                        <li><a href="https://mingzz1.github.io//development/database">Database</a></li>
+                        <li><a href="https://mingzz1.github.io//development/docker">Docker</a></li>
+                        <li><a href="https://mingzz1.github.io//development/github-blog">Github Blog</a></li>
+                        <li><a href="https://mingzz1.github.io//development/secure-coding">Secure Coding</a></li>
+                    </ul>
+                    <span class="down"></span>
+                </li>
+                <hr />
+                <li><a href="https://mingzz1.github.io//about">About</a></li>
+                <li><a href="https://mingzz1.github.io//archive">Archive</a></li>
+                <li><a href="https://mingzz1.github.io//tags">Tag</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="content">
+        
+        
+<div class="home">
+    <div class="posts">
+        <nav>
+    <h2>Menu</h2>
+    <ul class="slide">
+        <li class="on"><a href="/">All Post</a>
+        </li>
+        <li><a>Pentesting</a>
+            <ul>
+                <li><a href="https://mingzz1.github.io//pentesting/ios">iOS</a></li>
+                <li><a href="https://mingzz1.github.io//pentesting/android">Android</a></li>
+                <li><a href="https://mingzz1.github.io//pentesting/web">Web</a></li>
+                <li><a href="https://mingzz1.github.io//pentesting/cloud">Cloud</a></li>
+            </ul>
+            <span class="down"></span>
+        </li>
+        <li><a>Wargame</a>
+            <ul>
+                <li><a href="https://mingzz1.github.io//wargame/lord-of-sql-injection">Lord of SQL Injection</a></li>
+                <li><a href="https://mingzz1.github.io//wargame/pwnable.kr">Pwnable.kr</a></li>
+                <li><a href="https://mingzz1.github.io//wargame/wargame.kr">Wargame.kr</a></li>
+                <li><a href="https://mingzz1.github.io//wargame/xss-game">XSS Game</a></li>
+                <li><a href="https://mingzz1.github.io//wargame/owasp">OWASP-MSTG Crackmes</a></li>
+            </ul>
+            <span class="down"></span>
+        </li>
+        <li><a>CTF</a>
+            <ul>
+                <li><a href="https://mingzz1.github.io//ctf/2018">2018</a></li>
+                <li><a href="https://mingzz1.github.io//ctf/2019">2019</a></li>
+            </ul>
+            <span class="down"></span>
+        </li>
+        <li><a>Error</a>
+            <ul>
+                <li><a href="https://mingzz1.github.io//error/linux">Linux</a></li>
+                <li><a href="https://mingzz1.github.io//error/windows">Windows</a></li>
+                <li><a href="https://mingzz1.github.io//error/python">Python</a></li>
+            </ul>
+            <span class="down"></span>
+        </li>
+        <li><a>Development</a>
+            <ul>
+                <li><a href="https://mingzz1.github.io//development/basic">Basic</a></li>
+                <li><a href="https://mingzz1.github.io//development/web">Web</a></li>
+                <li><a href="https://mingzz1.github.io//development/mobile">Mobile</a></li>
+                <li><a href="https://mingzz1.github.io//development/database">Database</a></li>
+                <li><a href="https://mingzz1.github.io//development/docker">Docker</a></li>
+                <li><a href="https://mingzz1.github.io//development/github-blog">Github Blog</a></li>
+                <li><a href="https://mingzz1.github.io//development/secure-coding">Secure Coding</a></li>
+            </ul>
+            <span class="down"></span>
+        </li>
+        <hr />
+        <li><a href="https://mingzz1.github.io//about">About</a></li>
+        <li><a href="https://mingzz1.github.io//archive">Archive</a></li>
+        <li><a href="https://mingzz1.github.io//tags">Tag</a></li>
+    </ul>
+</nav>
+
+        <div>
+            <h3>All Post <span>130</span></h3>
+            <ul class="post-box">
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/08/01/los-bugbear.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - bugbear 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-08-01
+                                </p>
+                                <div class="excerpt">
+                                    <p>이번 문제는 <code>생각 전환</code>의 필요성에서 살짝 느꼈던 문제였다.
+뭔가 허점을 찌르는 느낌이었다.
+<code>bugbear</code>라는 문제이다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/ctf/2018/2018/07/31/ctf-isitdtu2018-friss.html/">
+                        <div>
+                            <h4>[ISITDTU 2018] Friss Write up</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-31
+                                </p>
+                                <div class="excerpt">
+                                    <p>갑자기 CTF가 많으니까 풀어볼 문제가 많아졌다.
+근데 다른사람이 작성한 Write-up 보고 문제를 보고 풀면 문제가 진짜 풀리고 배우는 점도 많아서 신난다.<br>
+<del>근데 또 새로운 문제 나오면 못풀겠지&hellip; 공부의 끝은 어디인가&hellip;</del>
+암튼 이번엔 <code>ISITDTU 2018</code>에 나왔던 <code>Friss</code>라는 문제를 풀어보았다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/07/31/los-darkknight.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - darkknight 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-31
+                                </p>
+                                <div class="excerpt">
+                                    <p>아 뭔가 쓸데없이 오타도 많이내고, 뭔가 자잘한 삽질을 많이 한 문제이다.
+잠을 제대로 못자서 그런건지 바보같은 삽질을 했다.
+<code>darkknight</code> 라는 문제인데, 얘도 <code>Blind SQL Injection</code> 문제이다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/07/30/los-golem.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - golem 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-30
+                                </p>
+                                <div class="excerpt">
+                                    <p>벌써 11일 째 매일매일 꾸준히 문제를 풀고 있다.
+작심삼일을 반복하던 내가 11일 째라니 기특하다.
+이번 문제도 역시 <code>Blind SQL Injection</code> 이다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/ctf/2018/2018/07/29/ctf-isitdtu2018-iz.html/">
+                        <div>
+                            <h4>[ISITDTU 2018] IZ Write up</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-29
+                                </p>
+                                <div class="excerpt">
+                                    <p>이번 주말에 CTF 천국이었다.
+무려 3개가 비슷한 시기에 있었다.
+사실 <code>ISITDTU CTF</code>는 대회 시간에 참여를 못했는데, <code>CODEBLUE CTF</code> 문제를 보다보니 멘탈이 날아가서 이미 끝난 대회 문제를 다시 봤다.
+멘탈을 치유하려고 출제됬던 웹 문제중에 가장 쉬워보이는 <code>IZ</code> 문제를 선택해서 풀었는데 얘는 좀 다른 방향으로 멘탈이 나갔다. ㅎㅎ
+알고나니 문제는 어렵지 않았는데, 다음에는 이러지 말자는 나름의 반성일기 겸 풀이를 작성했다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/07/29/los-skeleton.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - skeleton 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-29
+                                </p>
+                                <div class="excerpt">
+                                    <p>내일이 월요일이라니 실화인가.
+주말 너무 순삭되는 것 같다.
+지금 진행중인 <code>CTF</code> 문제를 풀고 싶은데 아직 내 실력으로는 무리라는걸 깨닫고 다시 <code>LOS</code>를 풀려고 돌아왔다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/07/28/los-vampire.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - vampire 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-28
+                                </p>
+                                <div class="excerpt">
+                                    <p>이번 문제도 역시 간단하게 풀 수 있었다.
+일단 소스코드가 짧으니 문제가 더 간단하게 느껴지는 것 같다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/07/27/los-troll.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - troll 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-27
+                                </p>
+                                <div class="excerpt">
+                                    <p>다음 문제의 이름은 <code>troll</code>이다.
+중간중간에 좀 쉬운 문제들이 있어서 하루에 여러개 빠박! 풀고 싶은데 그러면 내가 일을 안할 것 같으니 한문제 씩만 풀어야겠다.
+이번 문제는 매우 간단하다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/07/26/los-orge.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - orge 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-26
+                                </p>
+                                <div class="excerpt">
+                                    <p>이번 문제는 <code>orge</code> 이다.
+이 전 문제인 <code>darkelf</code>와 Blind SQL Injection 이었던 <code>orc</code> 문제가 섞인 것 같다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="post-teaser">
+                    <a href="https://mingzz1.github.io/wargame/lord-of-sql-injection/2018/07/25/los-darkelf.html/">
+                        <div>
+                            <h4>[Lord of SQL Injection] LoS - darkelf 문제풀이</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    2018-07-25
+                                </p>
+                                <div class="excerpt">
+                                    <p>다음 문제는 <code>darkelf</code> 이다.
+이번 문제는 이 전 문제와 동일한 풀이 방법으로 풀 수 있었다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="pagination">
+
+        
+        <a href="/page/10/" class="button">
+            <i class="fa fa-chevron-left"></i>
+            Prev
+        </a>
+        
+
+        
+        <a href="/page/12/" class="button">
+            Next
+            <i class="fa fa-chevron-right"></i>
+        </a>
+        
+
+    </div>
+    
+
+</div>
+
+    </div>
+    <ul class='social'>
+    
+    <li>
+        <a href="https://github.com/mingzz1" class="icon alt" target="_blank">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    <li>
+        <a href="https://www.linkedin.com/in/minji-kim-12986a145/" class="icon alt" target="_blank">
+            <i class="fa fa-linkedin fa-2x"></i>
+        </a>
+    </li>
+    
+</ul>
+<footer class="site-footer">
+    <p ckass="text">Powered by <a href="https://mingzz1.github.io" target="_blank">mingzzi</a> with <a
+            href="https://skye3133.github.io/" target="_blank">myund</a></p>
+</footer>
+
+    <script id="dsq-count-scr" src="//mingzzis-blog.disqus.com/count.js" async></script>
+
+    
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-130304424-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+    
+</body>
+</body>
+
+</html>
