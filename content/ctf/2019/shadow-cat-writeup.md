@@ -1,6 +1,6 @@
 ---
 title: "[VolgaCTF2019] Shadow Cat Write up"
-date: 2019-04-18
+date: 2019-04-08
 draft: false
 category: [ctf]
 subcategories: [2019]
