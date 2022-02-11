@@ -1,7 +1,7 @@
 ---
 title: "[AWS] AWS re:Invent 2021 참석기"
 date: 2022-02-11
-draft: false
+draft: true
 category: [development]
 subcategories: [cloud]
 tags: [AWS, Conference]
