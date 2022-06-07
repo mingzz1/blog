@@ -258,4 +258,4 @@ a87ec03b595d   0e901e68141f   "/docker-entrypoint.…"   22 seconds ago   Up 20 
 해당 서버의 확인은 `Docker`를 실행 중인 서버에서 직접 접속 할 경우에는 `localhost:8000`으로 접속하면 되며, 나같이 가상머신에 구축하고 호스트에서 접속 할 경우에는 `가상머신의주소:8000`을 입력하여 접속하면 된다.
 아래와 같이 `Welcome to nginx`가 나오면 `Terraform` 설치 및 첫 번째 테스트 성공이다!
 
-![](/images/cloud/terraform/terraform_installation/terrafrom_install_01.png)  
+![](/images/cloud/terraform/terraform_installation/terraform_install_01.png)  
