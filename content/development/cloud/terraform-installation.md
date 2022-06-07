@@ -1,10 +1,10 @@
 ---
 title: "[Terraform 사용기] Terraform 설치하기"
 date: 2022-06-07
-draft: true
+draft: false
 category: [development]
 subcategories: [cloud]
-tags: [AWS, Conference]
+tags: [Terraform, AWS]
 ---
 
 공부해야지 공부해야지 다짐만 하다가 드디어 시작힌 `Terraform` 공부다.
@@ -43,7 +43,7 @@ $ sudo apt-get update && sudo apt-get install terraform
 
 이 후 `terraform -help` 명령어를 실행했을 때 아래와 같이 설명이 출력된다면 제대로 설치가 된 것이다.
 
-```
+```bash
 $ terraform -help
 Usage: terraform [global options] <subcommand> [args]
 
@@ -86,9 +86,48 @@ Global options (use these before the subcommand, if any):
 ```
 
 `Terraform`을 설치하였으니 이를 활용하여 간단한 `Nginx` 서버를 띄워보려 한다.
-테스트를 하기 위해서는 [Docker가 설치]()되어 있어야 한다.
+테스트를 하기 위해서는 [Docker가 설치](https://mingzz1.github.io/development/docker/2022/06/06/docker-installation.html/)되어 있어야 한다.
 
+Docker 설치가 완료되었다면 테스트 용으로 폴더를 하나 생성하여 아래와 같이 `main.tf`를 생성한다.
+
+```bash
+$ mkdir learn-terraform-docker-container
+$ cd learn-terraform-docker-container
 ```
+
+이 때 `main.tf`의 내용은 아래와 같다.
+
+```r
+# main.tf
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "~> 2.13.0"
+    }
+  }
+}
+
+provider "docker" {}
+
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = false
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.latest
+  name  = "tutorial"
+  ports {
+    internal = 80
+    external = 8000
+  }
+}
+```
+
+다음으로 Terraform이 Docker와 상호작용할 수 있도록 하는 플러그인을 다운받기 위해 아래와 같이 프로젝트를 initializing 한다.
+
+```bash
 $ terraform init
 
 Initializing the backend...
@@ -117,6 +156,8 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
+
+이 후 `terraform apply`를 입력 할 경우 `Enter a value: `라는 입력 칸이 나오며, 이 때 `yes`를 입력하면 모든 `apply`가 완료된다.
 
 ```bash
 $ sudo terraform apply
@@ -206,8 +247,15 @@ docker_container.nginx: Creation complete after 0s [id=a87ec03b595d938ccf082fa8f
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
 
+`docker ps`를 통해 확인 해 보면 정상적으로 컨테이너가 생성되어 돌아가고 있는 것을 확인할 수 있다.
+
 ```bash
 $ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES
 a87ec03b595d   0e901e68141f   "/docker-entrypoint.…"   22 seconds ago   Up 20 seconds   0.0.0.0:8000->80/tcp   tutorial
 ```
+
+해당 서버의 확인은 `Docker`를 실행 중인 서버에서 직접 접속 할 경우에는 `localhost:8000`으로 접속하면 되며, 나같이 가상머신에 구축하고 호스트에서 접속 할 경우에는 `가상머신의주소:8000`을 입력하여 접속하면 된다.
+아래와 같이 `Welcome to nginx`가 나오면 `Terraform` 설치 및 첫 번째 테스트 성공이다!
+
+![](/images/cloud/terraform/terraform_installation/terrafrom_install_01.png)  
