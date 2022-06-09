@@ -97,7 +97,7 @@ $ cd learn-terraform-docker-container
 
 이 때 `main.tf`의 내용은 아래와 같다.
 
-```r
+```bash
 # main.tf
 terraform {
   required_providers {
