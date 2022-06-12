@@ -404,7 +404,7 @@ tags: [tag1], tag2]
 $ cd blog
 $ git init
 $ git remote add origin [blog Repository 경로]
-$ git submodule add -b [Default branch 명]] [github.io Repository 경로] public
+$ git submodule add -b [Default branch 명] [github.io Repository 경로] public
 ```
 
 내 경우에는 `blog Repository`의 주소는 `https://github.com/mingzz1/blog.git`이고, `github.io Repository`의 주소는 `https://github.com/mingzz1/mingzz1.github.io.git`이며, 두 Repository의 Default branch 명은 `main`이다.

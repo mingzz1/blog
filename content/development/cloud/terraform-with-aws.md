@@ -298,7 +298,7 @@ AMI의 정보는 `EC2` > `AMI` > `퍼블릭 이미지` 선택하여 확인할 �
 
 ```bash
 $ terraform apply
-aws_instance.app_server: Refreshing state... [id=i-036a288468ccba238]
+aws_instance.app_server: Refreshing state... [id=i-xxxxxxxx]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
 -/+ destroy and then create replacement
